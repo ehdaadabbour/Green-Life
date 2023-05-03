@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+     <title>
+        Green life
+     </title>
+     <link rel ="stylesheet" href="style.css">
+    
+    </head> 
+
+    <body>
+        <!--current time-->
+        <body onload="startTime()">
+            
+           <br><b><center><div id="txt"></div></center></b>
+            
+            <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  
+              return i;
+            }
+            </script>
+            
+            </body>
+     <!--home page-->
+    <div class="banner">
+         <div class="navbar"> 
+            <img src="image (4).png" class="logo">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+         </div>
+            
+         <div class="content" id="home">
+            <h1>GREEN LIFE</h1>
+            <p>we love helping you safe the earth</p>
+            <div> 
+                <button type="button"><span></span> Choose Your Fav </button>
+            </div>
+         </div>  
+    </div>
+        
+       <!---services--> 
+    <div class="plant" >
+        <p>Plants make a positive impact on your environment. So,provide your house & office space with  the right plants.
+        </p>
+    </div>
+
+    <div class="store" id="services">
+        <div class="box">
+            <img src="store1.jpeg">
+             <div class="info">
+                <h1 class="h">Home Plants</h1>
+                <p class="p">Home is where your plants are ! </p>
+             </div>
+        </div>
+    
+        <div class="box">
+            <img src="store2.jpeg">
+             <div class="info">
+                <h1 class="h">Office Plants</h1>
+                <p class="p"> Some days all you need is plant therapy !</p>
+             </div>
+        </div>
+        <div class="box">
+            <img src="store3.jpeg">
+             <div class="info">
+                <h1 class="h">Garden Plants</h1>
+                <p class="p"> Plant your own garden and decorate your own soul !</p>
+             </div>
+        </div>
+    </div> 
+    <!--contact us-->
+    <div class="contact-us" id="contact">
+        <h1>Contact Us</h1>
+        <div class="text">
+            <label>Name:</label>
+            <input type="text" name=""  value="" placeholder="Your Name" required>
+        </div>
+        <div class="text">
+            <label>Email:</label>
+            <input type="email" name=""  value="" placeholder="Your Email" required>
+        </div>
+        <div class="text">
+            <label>Phone Number:</label>
+            <input type="text" name=""  value="" placeholder="Your Phona" required>
+        </div>
+        <div class="text">
+            <label>Message</label>
+            <textarea></textarea>
+        </div>
+        <a class="send">Send</a>
+    </div>
+
+
+
+
+    </body>
+</html>
