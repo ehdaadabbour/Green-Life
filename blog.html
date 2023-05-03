@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+     <title>
+        Our Blog
+     </title>
+     <link rel ="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <!---current time-->
+        <body onload="startTime()">
+            
+            <br><b><center><div id="txt"></div></center></b>
+            
+            <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  
+              return i;
+            }
+            </script>
+            
+            </body>
+            <!--blog-->
+        <div class="blogg">
+            <h1> Our BLOG</h1> 
+         </div>
+         
+         <div class="blog">
+             <div class="blog1">
+                 <img src="blog1.jpeg">
+                 <h1> How to manage a home garden</h1>
+                 <p>A healthy garden requires regular maintenance throughout the growing season. Most plants require sun, water and nutrients to produce well. Gardeners must mainly worry about nutrients and water if they plant in a bed with the proper sun exposure. </p>
+             </div>
+             
+             <div class="blog1">
+                 <img src="blog2.jpeg">
+                 <h1>How plants affect mental health</h1>
+                 <p>Studies show that all plants provide mental health benefits. Constantly seeing and being around plants help us feel more calm and relaxed, thus decreasing levels of anxiety. Nurturing and caring for our plants can also reduce stress levels and boost our mood.</p>
+             </div> 
+         </div>
+        
+         <div class="flower">
+            <h1>Decor Ideas</h1>
+        </div>
+        <div class="ourcard">
+            <div class="card2">
+                <img src="plant5.jpeg">
+            </div>
+            <div class="card2">
+                <img src="plant6.jpeg">
+            </div>
+            <div class="card2">
+                <img src="plant7.jpeg">
+            </div>
+            <div class="card2">
+                <img src="plant8.jpeg">  
+            </div>
+        </div>
+        <div> 
+            <a href="#" class="btn">See More</a>
+        </div>
+        </body>
+     </html>
+       
+        
+    
