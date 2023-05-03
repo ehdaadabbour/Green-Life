@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+     <title>
+        Our Store
+     </title>
+     <link rel ="stylesheet" href="style.css">
+    </head> 
+
+    <body>
+        <!--current time-->
+        <body onload="startTime()">
+            
+            <br><b><center><div id="txt"></div></center></b>
+            
+            <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i}; 
+              return i;
+            }
+            </script>
+            
+            </body>
+
+            <!--store-->
+        <div class="flower">
+            <h1>OUR PLANTS</h1>
+            <h4>ALL </h4>
+        </div>
+        <div class="our">
+            <div class="card">
+                <img src="plant3.png">
+                 <div class="info2">
+                    <h1 class="h2">Mahgony Tree</h1>
+                    <h3 class="h3">$750</h3>
+                 </div>
+            </div>
+            
+            <div class="card">
+                <img src="plant1.jpeg">
+                 <div class="info2">
+                    <h1 class="h2">Peacy lily   </h1>
+                    <h3 class="h3">$750.65</h3>
+                 </div>
+            </div>
+            <div class="card">
+                <img src="plant2.png">
+                 <div class="info2">
+                    <h1 class="h2">Monstera Deliciosa</h1>
+                    <h3 class="h3">$600.58</h3>
+                 </div>
+            </div>
+            <div class="card">
+                <img src="plant4.png">
+                 <div class="info2">
+                    <h1 class="h2">Bird Of Paradise</h1>
+                    <h3 class="h3">$575.83</h3>
+                 </div>
+                 
+            </div>  
+        </div>
+        <div class="our">
+            <div class="card">
+                <img src="alocasia.png">
+                 <div class="info2">
+                    <h1 class="h2">Alocasia Macrorrhize</h1>
+                    <h3 class="h3">$330.30</h3>
+                 </div>
+            </div>
+            <div class="card">
+                <img src="calathea.png">
+                 <div class="info2">
+                    <h1 class="h2">calathea Rattlesnake</h1>
+                    <h3 class="h3">$425.70</h3>
+                 </div>
+            </div>
+            <div class="card">
+                <img src="prickly.png">
+                 <div class="info2">
+                    <h1 class="h2">Prickly Pear Cactus </h1>
+                    <h3 class="h3">$109</h3>
+                 </div>
+            </div>
+            <div class="card">
+                <img src="vittata.png">
+                 <div class="info2">
+                    <h1 class="h2">calathea Vittata</h1>
+                    <h3 class="h3">$285.50</h3>
+                 </div>
+            </div>
+        </div>
+        <div> 
+            <a href="#" class="btn">Load More</a>
+        </div>
+        <!--discount-->
+        <div class="discount">
+            <img src="disc.png">
+            <h1>YOU DESERVE THE BEST</h1>
+            <h3>Subscribe & get 10% discount</h3>
+        <div>
+            <a href="#" class="bton">Subscribe</a>
+        </div>
+        </div>        
+    </body>
+</html>
